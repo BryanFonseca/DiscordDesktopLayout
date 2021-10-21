@@ -7,6 +7,15 @@
 body{
   --main-color: #333;
   --main-color-darker: #222;
+
+  --main-color-shade-1: #1f1f1f;
+  --main-color-shade-2: #1b1b1b;
+  --main-color-shade-3: #181818;
+
+  --main-color-tint-1: #383838;
+  --main-color-tint-2: #4e4e4e;
+  --main-color-tint-3: #646464;
+
   --main-color-lighter: #444;
   --light-gray: #eee;
   --mid-gray: #999;
@@ -28,7 +37,7 @@ body{
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background-color: var(--main-color-darker);
+  background-color: var(--main-color-shade-2);
 }
 
 .icon-circle{
@@ -244,6 +253,8 @@ ion-icon{
   cursor: pointer;
   color: var(--mid-gray);
   border-radius: 0.25em;
+  display: flex;
+  align-items: center;
 }
 
 .link{
@@ -291,12 +302,66 @@ ion-icon{
 .user-menu{
   height: 3rem;
   width: 100%;
-  background-color: white;
+  background-color: var(--main-color-shade-1);
   position: absolute;
   bottom: 0;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6em;
 }
 
+.name{
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.status{
+  font-size: 0.7rem;
+}
+
+.name-and-status{
+  flex-basis: 1;
+  flex-grow: 15;
+  flex-shrink: 0;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  cursor: pointer;
+}
+
+.user .icon-circle{
+  flex-basis: content;
+  flex-grow: 0;
+  height: auto;
+}
+
+.user-menu > .icon-circle{
+  width: 2rem;
+  height: 2rem;
+}
+
+.user-menu .friend-img{
+  width: 2rem;
+  height: 2rem;
+} 
+
+.user-menu ion-icon{
+  height: 1.4rem;
+  width: 1.4rem;
+  flex-grow: 0;
+  box-sizing: content-box;
+  padding: 0.3rem;
+  color: var(--mid-gray);
+}
+
+.buttons-user-menu{
+  display: flex;
+}
 
 .chat-view{
   background-color: var(--main-color-lighter);
