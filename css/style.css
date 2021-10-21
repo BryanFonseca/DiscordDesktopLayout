@@ -49,8 +49,12 @@ body{
 }
 
 .icon-container:hover .icon-components--small .icon-circle{
-  background-color: red;
   border-radius: 30% !important;
+  background-color: orangered;
+}
+
+.icon-container:nth-of-type(1) .icon-components--big .icon-circle{
+  background-color: grey;
 }
 
 .icon-container:hover .icon-components--small.icon-components::before{
@@ -152,11 +156,17 @@ ion-icon{
   padding: 0.2em;
   grid-column: 2;
   border-bottom: 2px solid var(--main-color-darker);
+  display: flex;
+  align-items: center;
 }
 
 .chats-bar{
   grid-column: 1;
   grid-row: 2;
+}
+
+.chats-bar > *{
+  width: 100%;
 }
 
 .section{
@@ -187,7 +197,7 @@ ion-icon{
 }
 
 .links{
-  margin-top: 1em;
+/*   margin-top: 1em; */
 }
 
 .link-icon{
@@ -226,6 +236,10 @@ ion-icon{
   display: flex;
   align-items: center;
   gap: 1em;
+}
+
+.friend-img{
+  width: 2.5rem;
 }
 
 .friend span{
