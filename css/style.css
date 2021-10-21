@@ -1,0 +1,245 @@
+*, ::after, ::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  --main-color: #333;
+  --main-color-darker: #222;
+  --main-color-lighter: #444;
+  --light-gray: #fff;
+  --important-green: #2f9e44;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.app-window{
+  display: grid;
+  height: 100vh;
+  background-color: var(--main-color);
+  grid-template-columns: calc(3.4em + 2em) 1fr;
+}
+
+.servers-bar{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: var(--main-color-darker);
+}
+
+.icon-circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.4rem;
+  width: 2.4rem;
+  background-color: var(--main-color-lighter);
+  border-radius: 50%;
+  overflow: hidden;
+  transition: border-radius 0.2s;
+}
+
+.icon{
+  margin: 0 auto;
+  cursor: pointer;
+  height: 3.4rem;
+  width: 3.4rem;
+}
+
+.icon-container:hover .icon-components--small .icon-circle{
+  background-color: red;
+  border-radius: 30% !important;
+}
+
+.icon-container:hover .icon-components--small.icon-components::before{
+  padding-bottom: 65%;
+}
+
+/* .icon-components{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+} */
+
+.icon-components{
+  position: relative;
+}
+
+.icon-components::before{
+  content: "";
+  position: absolute;
+  background-color: var(--light-gray);
+  left: -20%;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding-left: 16%;
+  border-radius: 1em;
+  z-index: 1;
+
+  transition: padding-bottom 0.2s;
+}
+
+.icon-components--big::before{
+  padding-bottom: 65%;
+}
+
+.icon-components--small::before{
+  padding-bottom: 15%;
+}
+
+.icon-circle{
+  flex-shrink: 0;
+}
+
+.icon-main{
+  border-radius: 30% !important;
+  position: relative;
+  /*   margin-bottom: 1em; */
+}
+
+
+.icon-container:first-child::after{
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  background-color: var(--main-color-lighter);
+  margin: 1em auto 0 auto;
+}
+
+.icon-circle{
+  transition: all 0.2s;
+}
+
+.ion-icon{
+  transition: all 0.2s;
+}
+
+.icon-container.icon--important:hover .icon-circle{
+  background-color: var(--important-green);
+}
+.icon-container.icon--important:hover ion-icon{
+  color: #fff;
+}
+
+.stroke-important{
+  color: var(--important-green);
+}
+
+ion-icon{
+  height: 2.2rem;
+  width: 2.2rem;
+  color: #fff;
+}
+
+.inner-section{
+  display: grid;
+  grid-template-columns: 1fr 4.8fr;
+  grid-template-rows: auto 1fr;
+}
+
+.search-bar{
+  padding: 0.2em;
+}
+
+.chat-menu-bar{
+  padding: 0.2em;
+  grid-column: 2;
+}
+
+.column2{
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.section{
+  padding: 0.5em;
+}
+
+/******************************** */
+/* Columna 2 */
+/******************************** */
+.chats-bar{
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  color: var(--light-gray);
+}
+
+.search-bar > input{
+  display: block;
+  width: 95%;
+  font-size: 1rem;
+  padding: 0.3em;
+  background-color: var(--main-color-darker);
+  border: none;
+  color: var(--light-gray);
+}
+
+.links{
+  margin-top: 1em;
+}
+
+.link-icon{
+  margin-left: 0.5em;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.link{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.link h2{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.direct-messages > h2{
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0.8em;
+}
+
+.friends{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.friend{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.friend span{
+  font-size: 0.9rem;
+}
+
+.person-icon{
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.user-menu{
+  height: 2rem;
+  width: 100%;
+  background-color: white;
+  margin-top: auto;
+}
+
+
+.chat-view{
+  background-color: var(--main-color-lighter);
+}
