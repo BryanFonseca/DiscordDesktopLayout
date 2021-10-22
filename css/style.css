@@ -28,6 +28,12 @@ body{
 
 img{
   -webkit-user-drag: none;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .select-disable {
@@ -97,346 +103,370 @@ position: relative;
 display: flex;
 align-items: center;
 gap: 0.2em;
-} */
+} 
+*/
 
-  .icon-components{
-    position: relative;
-  }
+.icon-components{
+  position: relative;
+}
 
-  .icon-components::before{
-    content: "";
-    position: absolute;
-    background-color: var(--light-gray);
-    left: -20%;
-    top: 50%;
-    transform: translate(0, -50%);
-    padding-left: 16%;
-    border-radius: 1em;
-    z-index: 1;
+.icon-components::before{
+  content: "";
+  position: absolute;
+  background-color: var(--light-gray);
+  left: -20%;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding-left: 16%;
+  border-radius: 1em;
+  z-index: 1;
 
-    transition: padding-bottom 0.2s;
-  }
+  transition: padding-bottom 0.2s;
+}
 
-  .icon-components--big::before{
-    padding-bottom: 65%;
-  }
+.icon-notification{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+  position: absolute;
+  background-color: #f72869;
+  z-index: 1;
+  bottom: -10%;
+  right: 10%;
+  height: 1.85rem;
+  min-width: 1.85rem;
+  border-radius: 100px;
+  border: 5px solid var(--main-color-shade-2);
+}
 
-  .icon-components--small::before{
-    padding-bottom: 15%;
-  }
+.notification-count{
+  display: inline-block;
+  padding: 0.4em;
+}
 
-  .icon-circle{
-    flex-shrink: 0;
-  }
+.icon-components--big::before{
+  padding-bottom: 65%;
+}
 
-  .icon-main{
-    border-radius: 30% !important;
-    position: relative;
-    /*   margin-bottom: 1em; */
-  }
+.icon-components--small::before{
+  padding-bottom: 15%;
+}
 
+.icon-circle{
+  flex-shrink: 0;
+}
 
-  .icon-container:first-child::after{
-    content: "";
-    display: block;
-    width: 45%;
-    height: 2px;
-    background-color: var(--main-color-lighter);
-    margin: 1em auto 0 auto;
-  }
-
-  .icon-circle{
-    transition: all 0.2s;
-  }
-
-  .ion-icon{
-    transition: all 0.2s;
-  }
-
-  .icon-container.icon--important:hover .icon-circle{
-    background-color: var(--important-green);
-  }
-  .icon-container.icon--important:hover ion-icon{
-    color: #fff;
-  }
-
-  .stroke-important{
-    color: var(--important-green);
-  }
-
-  ion-icon{
-    height: 2.2rem;
-    width: 2.2rem;
-    color: #fff;
-  }
-
-  .inner-section{
-    display: grid;
-    grid-template-columns: 14rem 4.8fr;
-
-    /* Posiblemente esta sería una mejor opción si usara media queries */
-    /*   grid-template-columns: 1fr 4.8fr; */
-    grid-template-rows: auto 1fr;
-    border-top-left-radius: 0.8em;
-    overflow: hidden;
-  }
-
-  .search-bar{
-    padding: 0.2em;
-    border-bottom: 2px solid var(--main-color-darker);
-  }
+.icon-main{
+  border-radius: 30% !important;
+  position: relative;
+  /*   margin-bottom: 1em; */
+}
 
 
-  .chat-menu-bar{
-    background-color: var(--main-color-lighter);
-    padding: 0.2em;
-    grid-column: 2;
-    border-bottom: 2px solid var(--main-color-darker);
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  }
+.icon-container:first-child::after{
+  content: "";
+  display: block;
+  width: 45%;
+  height: 2px;
+  background-color: var(--main-color-lighter);
+  margin: 1em auto 0 auto;
+}
 
-  .chat-menu-bar ion-icon{
-    margin-left: 0.3em;
-    height: 1.9rem;
-    color: var(--mid-gray);
-  }
+.icon-circle{
+  transition: all 0.2s;
+}
 
-  .chats-bar{
-    grid-column: 1;
-    grid-row: 2;
-  }
+.ion-icon{
+  transition: all 0.2s;
+}
 
-  .chats-bar > *{
-    width: 100%;
-  }
+.icon-container.icon--important:hover .icon-circle{
+  background-color: var(--important-green);
+}
+.icon-container.icon--important:hover ion-icon{
+  color: #fff;
+}
 
-  .section{
-    padding: 0.5em;
-  }
+.stroke-important{
+  color: var(--important-green);
+}
 
-  /******************************** */
-  /* Columna 2 */
-  /******************************** */
-  .chats-bar{
-    background-color: var(--main-color);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1em;
-    color: var(--light-gray);
-    position: relative;
-  }
+ion-icon{
+  height: 2.2rem;
+  width: 2.2rem;
+  color: #fff;
+}
 
-  .search-bar{
-    background-color: var(--main-color);
-  }
+.inner-section{
+  display: grid;
+  grid-template-columns: 14rem 4.8fr;
 
-  .search-for-chat-container{
-    display: flex;
-    justify-content: center;
-    width: 98%;
-    height: 1.8rem;
-    font-size: 0.8rem;
-    padding: 0.3em;
-    background-color: var(--main-color-darker);
-    border-radius: 0.35em;
-    color: var(--light-gray);
-    margin: 0 auto;
-  }
+  /* Posiblemente esta sería una mejor opción si usara media queries */
+  /*   grid-template-columns: 1fr 4.8fr; */
+  grid-template-rows: auto 1fr;
+  border-top-left-radius: 0.8em;
+  overflow: hidden;
+}
 
-  .search-for-chat-container input{
-    display: block;
-    background-color: transparent;
-    border: none;
-    width: 97%;
-  }
+.search-bar{
+  padding: 0.2em;
+  border-bottom: 2px solid var(--main-color-darker);
+}
 
-  .links > *+*{
-    margin-top: 0.2em;
-  }
 
-  .link-icon{
-    margin-left: 0.5em;
-    height: 1.5rem;
-    width: 1.5rem;
-  }
+.chat-menu-bar{
+  background-color: var(--main-color-lighter);
+  padding: 0.2em;
+  grid-column: 2;
+  border-bottom: 2px solid var(--main-color-darker);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
 
-  .link{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1em;
-  }
+.chat-menu-bar ion-icon{
+  margin-left: 0.3em;
+  height: 1.9rem;
+  color: var(--mid-gray);
+}
 
-  .link h2{
-    font-size: 1rem;
-    font-weight: 400;
-  }
+.chats-bar{
+  grid-column: 1;
+  grid-row: 2;
+}
 
-  .direct-messages > h2{
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 0.8em;
-  }
+.chats-bar > *{
+  width: 100%;
+}
 
-  .friends{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-  }
+.section{
+  padding: 0.5em;
+}
 
-  .friend{
-    display: flex;
-    align-items: center;
-    padding: 0.2em 0.4em;
-    gap: 1em;
-  }
+/******************************** */
+/* Columna 2 */
+/******************************** */
+.chats-bar{
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  color: var(--light-gray);
+  position: relative;
+}
 
-  .button{
-    cursor: pointer;
-    color: var(--mid-gray);
-    border-radius: 0.25em;
-    display: flex;
-    align-items: center;
-  }
+.search-bar{
+  background-color: var(--main-color);
+}
 
-  .link{
-    padding: 0.6em 0.4em;
-  }
+.search-for-chat-container{
+  display: flex;
+  justify-content: center;
+  width: 98%;
+  height: 1.8rem;
+  font-size: 0.8rem;
+  padding: 0.3em;
+  background-color: var(--main-color-darker);
+  border-radius: 0.35em;
+  color: var(--light-gray);
+  margin: 0 auto;
+}
 
-  .button:hover{
-    background-color: var(--main-color-lighter);
-    color: var(--light-gray);
-  }
+.search-for-chat-container input{
+  display: block;
+  background-color: transparent;
+  border: none;
+  width: 97%;
+}
 
-  .active{
-    background-color: var(--main-color-lighter);
-    color: var(--light-gray);
-  }
+.links > *+*{
+  margin-top: 0.2em;
+}
 
-  .close-symbol{
-    display: none;
-  }
+.link-icon{
+  margin-left: 0.5em;
+  height: 1.5rem;
+  width: 1.5rem;
+}
 
-  .friend:hover .close-symbol{
-    display: block;
-    margin: 0 0.2em 0 auto;
-    font-size: 1.5rem;
-    color: var(--mid-gray);
-  }
+.link{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
 
-  .friends .close-symbol:hover{
-    color: #bbb;
-  }
+.link h2{
+  font-size: 1rem;
+  font-weight: 400;
+}
 
-  .friend-img{
-    width: 2.3rem;
-  }
+.direct-messages > h2{
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 0.8em;
+}
 
-  .friend span{
-    font-size: 0.9rem;
-  }
+.friends{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 
-  .person-icon{
-    width: 1.8rem;
-    height: 1.8rem;
-  }
+.friend{
+  display: flex;
+  align-items: center;
+  padding: 0.2em 0.4em;
+  gap: 1em;
+}
 
-  .user-menu{
-    height: 3rem;
-    width: 100%;
-    background-color: var(--main-color-shade-1);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.6em;
-    overflow: hidden;
-  }
+.button{
+  cursor: pointer;
+  color: var(--mid-gray);
+  border-radius: 0.25em;
+  display: flex;
+  align-items: center;
+}
 
-  .name{
-    font-size: 0.9rem;
-    font-weight: 700;
-  }
+.link{
+  padding: 0.6em 0.4em;
+}
 
-  .status{
-    font-size: 0.7rem;
-  }
+.button:hover{
+  background-color: var(--main-color-lighter);
+  color: var(--light-gray);
+}
 
-  .name-and-status{
-    flex-basis: 1;
-    flex-grow: 15;
-    flex-shrink: 0;
-  }
+.active{
+  background-color: var(--main-color-lighter);
+  color: var(--light-gray);
+}
 
-  .user{
-    display: flex;
-    align-items: center;
-    gap: 0.3em;
-    cursor: pointer;
-  }
+.close-symbol{
+  display: none;
+}
 
-  .user .icon-circle{
-    flex-basis: content;
-    flex-grow: 0;
-    height: auto;
-  }
+.friend:hover .close-symbol{
+  display: block;
+  margin: 0 0.2em 0 auto;
+  font-size: 1.5rem;
+  color: var(--mid-gray);
+}
 
-  .user-menu > .icon-circle{
-    width: 2rem;
-    height: 2rem;
-  }
+.friends .close-symbol:hover{
+  color: #bbb;
+}
 
-  .user-menu .friend-img{
-    width: 2rem;
-    height: 2rem;
-  } 
+.friend-img{
+  width: 2.3rem;
+}
 
-  .user-menu ion-icon{
-    height: 1.4rem;
-    width: 1.4rem;
-    /*   flex-grow: 0; */
-    box-sizing: content-box;
-    padding: 0.3rem;
-    color: var(--mid-gray);
-  }
+.friend span{
+  font-size: 0.9rem;
+}
 
-  .buttons-user-menu{
-    display: flex;
-  }
+.person-icon{
+  width: 1.8rem;
+  height: 1.8rem;
+}
 
-  .chat-view{
-    background-color: var(--main-color-lighter);
-  }
+.user-menu{
+  height: 3rem;
+  width: 100%;
+  background-color: var(--main-color-shade-1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6em;
+  overflow: hidden;
+}
 
-  .padding-s{
-    padding: 0.5em;
-  }
+.name{
+  font-size: 0.9rem;
+  font-weight: 700;
+}
 
-  .padding-m{
-    padding: 1em;
-  }
+.status{
+  font-size: 0.7rem;
+}
 
-  .chating-with{
-    font-weight: 600;
-  }
+.name-and-status{
+  flex-basis: 1;
+  flex-grow: 15;
+  flex-shrink: 0;
+}
 
-  /*********************************/
-  /* CHAT SECTION */
-  /*********************************/
+.user{
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  cursor: pointer;
+}
 
-  .chat-view{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    height: 100%;
-    padding-top: 0;
-    padding-left: 0.6em;
+.user .icon-circle{
+  flex-basis: content;
+  flex-grow: 0;
+  height: auto;
+}
+
+.user-menu > .icon-circle{
+  width: 2rem;
+  height: 2rem;
+}
+
+.user-menu .friend-img{
+  width: 2rem;
+  height: 2rem;
+} 
+
+.user-menu ion-icon{
+  height: 1.4rem;
+  width: 1.4rem;
+  /*   flex-grow: 0; */
+  box-sizing: content-box;
+  padding: 0.3rem;
+  color: var(--mid-gray);
+}
+
+.buttons-user-menu{
+  display: flex;
+}
+
+.chat-view{
+  background-color: var(--main-color-lighter);
+}
+
+.padding-s{
+  padding: 0.5em;
+}
+
+.padding-m{
+  padding: 1em;
+}
+
+.chating-with{
+  font-weight: 600;
+}
+
+/*********************************/
+/* CHAT SECTION */
+/*********************************/
+
+.chat-view{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%;
+  padding-top: 0;
+  padding-left: 0.6em;
     /*   align-items: stretch;
     /*   display: grid;
     grid-template-rows: 1fr auto; */
