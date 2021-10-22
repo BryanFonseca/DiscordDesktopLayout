@@ -213,17 +213,24 @@ ion-icon{
   background-color: var(--main-color);
 }
 
-.search-bar > input{
-  display: block;
+.search-for-chat-container{
+  display: flex;
+  justify-content: center;
   width: 98%;
   height: 1.8rem;
   font-size: 0.8rem;
   padding: 0.3em;
   background-color: var(--main-color-darker);
-  border: none;
   border-radius: 0.35em;
   color: var(--light-gray);
   margin: 0 auto;
+}
+
+.search-for-chat-container input{
+  display: block;
+  background-color: transparent;
+  border: none;
+  width: 97%;
 }
 
 .links > *+*{
