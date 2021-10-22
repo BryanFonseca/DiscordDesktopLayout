@@ -24,6 +24,9 @@ body{
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   color: var(--text-color);
+
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
 }
 
 img{
@@ -54,9 +57,28 @@ img{
 
 .app-window{
   display: grid;
-  height: 100vh;
+  height: calc(100vh - 1.6rem);
   background-color: var(--main-color-shade-2);
   grid-template-columns: calc(3.4em + 2em) 1fr;
+}
+
+header{
+/*   text-transform: uppercase; */
+  font-weight: 700;
+  font-size: 0.75rem;
+  background-color: var(--main-color-shade-2);
+/*   padding-left: 1rem;
+  padding-top: 0.4rem; */
+  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem 0.5rem 1rem;
+  color: var(--mid-gray);
+  letter-spacing: 0.1em;
+  line-height: 100%;
+}
+
+header > span{
+  display: block;
+  transform: scale(1, 0.95);
 }
 
 .servers-bar{
@@ -64,6 +86,10 @@ img{
   flex-direction: column;
   gap: 1em;
   background-color: var(--main-color-shade-2);
+}
+
+.servers-bar.section{
+  padding-top: 0;
 }
 
 .icon-circle{
@@ -74,7 +100,6 @@ img{
   width: 2.3rem;
   background-color: var(--main-color-lighter);
   border-radius: 50%;
-  overflow: hidden;
   transition: border-radius 0.2s;
 }
 
@@ -423,9 +448,32 @@ ion-icon{
 }
 
 .user-menu .friend-img{
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
 } 
+
+.user .icon-circle{
+  position: relative;
+}
+
+.user .icon-circle::after{
+  box-sizing: content-box;
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  height: 35%;
+  border: 3px solid var(--main-color-shade-2);
+  background-color: var(--important-green);
+  border-radius: 50%;
+  overflow: hidden;
+  transition: border-radius 0.2s;
+  position: absolute;
+  right: -8%;
+  bottom: -12%;
+  z-index: 1;
+}
 
 .user-menu ion-icon{
   height: 1.4rem;
@@ -557,4 +605,8 @@ ion-icon{
 
 .message:hover{
   background-color: var(--main-color-tint-1);
+}
+
+.icon-circle img{
+  border-radius: 50%;
 }
