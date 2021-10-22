@@ -152,7 +152,10 @@ ion-icon{
 
 .inner-section{
   display: grid;
-  grid-template-columns: 1fr 4.8fr;
+  grid-template-columns: 14rem 4.8fr;
+
+/* Posiblemente esta sería una mejor opción si usara media queries */
+/*   grid-template-columns: 1fr 4.8fr; */
   grid-template-rows: auto 1fr;
   border-top-left-radius: 0.8em;
   overflow: hidden;
@@ -172,6 +175,12 @@ ion-icon{
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+
+.chat-menu-bar ion-icon{
+  margin-left: 0.3em;
+  height: 1.9rem;
+  color: var(--mid-gray);
 }
 
 .chats-bar{
@@ -320,6 +329,7 @@ ion-icon{
   align-items: center;
   justify-content: space-between;
   gap: 0.6em;
+  overflow: hidden;
 }
 
 .name{
@@ -363,7 +373,7 @@ ion-icon{
 .user-menu ion-icon{
   height: 1.4rem;
   width: 1.4rem;
-  flex-grow: 0;
+/*   flex-grow: 0; */
   box-sizing: content-box;
   padding: 0.3rem;
   color: var(--mid-gray);
@@ -387,4 +397,107 @@ ion-icon{
 
 .chating-with{
   font-weight: 600;
+}
+
+/*********************************/
+/* CHAT SECTION */
+/*********************************/
+
+.chat-view{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  height: 100%;
+  padding-top: 0;
+  padding-left: 0.6em;
+/*   align-items: stretch;
+/*   display: grid;
+  grid-template-rows: 1fr auto; */
+}
+
+.input-message{
+  width: 98%;
+  margin: 0 auto;
+  background-color: var(--main-color-darker);
+  border-radius: 0.4em;
+  height: 2.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 0.8em;
+}
+
+.input-message > input{
+  display: block;
+  width: 89%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 0.95rem;
+  caret-color: #fff;
+  color: #fff;
+}
+
+.icon-chat-input{
+  height: 1.7rem;
+  width: 1.7rem;
+  color: var(--mid-gray);
+}
+
+.input-message .button:hover{
+  background-color: transparent;
+}
+
+.chat{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  overflow-y: auto;
+  margin-bottom: 1em;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.message{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.2em;
+}
+
+.message > .icon-circle{
+  height: 2.6rem;
+  width: 2.6rem;
+}
+
+.message img{
+  height: 2.6rem;
+  width: 2.6rem;
+}
+
+.message-sender{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.message-text{
+  font-size: 0.9rem;
+  color: var(--light-gray);
+}
+
+.message-data{
+  display: flex;
+  flex-direction: column;
+}
+
+.message-date{
+  font-size: 0.8rem;
+  color: var(--mid-gray);
+  margin-left: 0.4em;
+}
+
+.message:hover{
+  background-color: var(--main-color-tint-1);
 }
