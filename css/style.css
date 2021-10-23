@@ -122,7 +122,7 @@ header > span{
 }
 
 .icon-container:hover .icon-components--small.icon-components::before{
-  padding-bottom: 65%;
+  padding-bottom: 40%;
 }
 
 /* .icon-components{
@@ -342,7 +342,7 @@ ion-icon{
 .friends{
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.5em;
 }
 
 .friend{
