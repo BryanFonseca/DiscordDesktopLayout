@@ -25,8 +25,10 @@ body{
   font-weight: 500;
   color: var(--text-color);
 
+  display: grid;
   grid-template-rows: auto 1fr;
-  overflow: hidden;
+
+  height: 100vh;
 }
 
 img{
@@ -57,7 +59,7 @@ img{
 
 .app-window{
   display: grid;
-  height: calc(100vh - 1.6rem);
+/*   height: calc(100vh - 1.6rem); */
   background-color: var(--main-color-shade-2);
   grid-template-columns: calc(3.4em + 2em) 1fr;
 }
