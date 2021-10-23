@@ -612,3 +612,74 @@ ion-icon{
 .icon-circle img{
   border-radius: 50%;
 }
+
+
+/*********************************/
+/* MODAL */
+/*********************************/
+
+.invisible{
+  display: none;
+  opacity: 0%;
+}
+
+.modal{
+  opacity: 100%;
+  transition: opacity 0.5s;
+}
+
+.modal-backdrop{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.modal-body{
+  position: fixed;
+  top: 50%;
+  right: 30%;
+  left: 30%;
+  padding: 2em 2.5em;
+  overflow: auto;
+  transform: translate(0, -50%);
+  border-radius: 0.9em;
+  background-color: var(--main-color);
+  color: var(--light-gray);
+  z-index: 2;
+}
+
+.modal-body h2{
+  margin-bottom: 0.8em;
+}
+
+.modal-body p{
+  line-height: 1.5;
+}
+
+.modal-close{
+  cursor: pointer;
+  border: none;
+}
+
+.modal-close{
+  position: absolute;
+  right: 3.5%;
+  top: 8%;
+  height: 0.9em;
+  width: 0.9em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+/*   border-radius: 50%; */
+  color: var(--mid-gray);
+  background-color: transparent;
+}
+
+.modal-close:hover{
+  color: #bbb;
+}
