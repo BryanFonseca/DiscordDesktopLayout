@@ -308,6 +308,8 @@ ion-icon{
   background-color: transparent;
   border: none;
   width: 97%;
+  outline: none;
+  color: var(--light-gray);
 }
 
 .links > *+*{
