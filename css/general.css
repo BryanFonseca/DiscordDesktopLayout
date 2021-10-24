@@ -118,3 +118,7 @@ ion-icon{
   background: transparent;
   border-radius: 4px;
 }
+
+.hide{
+  display: none !important;
+}

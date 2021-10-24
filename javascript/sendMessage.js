@@ -10,6 +10,9 @@ const scrollToBottom = () => {
   });
 }
 
+// non-smooth scroll
+// chatContainer.scroll(0, chatContainer.scrollHeight);
+
 scrollToBottom();
 
 const sendMessage = () => {
@@ -37,11 +40,5 @@ const sendMessage = () => {
   }
 };
 
-sendButton.addEventListener('click', () => {
-  sendMessage();
-});
-
-messageInput.addEventListener('keydown', (e) => {
-  if(e.key === 'Enter')
-    sendMessage();
-});
+sendButton.addEventListener('click', () => sendMessage());
+messageInput.addEventListener('keydown', e => e.key === 'Enter' && sendMessage());
