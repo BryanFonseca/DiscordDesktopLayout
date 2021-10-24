@@ -2,18 +2,18 @@ const messageInput = document.querySelector('.input-message input');
 const sendButton = document.querySelector('.send-message-button');
 const chatContainer = document.querySelector('.chat');
 
-const scrollToBottom = () => {
+const scrollToBottom = (mode) => {
   chatContainer.scroll({
     top: chatContainer.scrollHeight, 
     left: 0,
-    behavior: 'smooth',
+    behavior: mode || undefined,
   });
 }
 
 // non-smooth scroll
 // chatContainer.scroll(0, chatContainer.scrollHeight);
 
-scrollToBottom();
+scrollToBottom('smooth');
 
 const sendMessage = () => {
   const messageText = messageInput.value;

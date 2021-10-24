@@ -193,14 +193,14 @@ header > span{
 .search-for-chat-container{
   display: flex;
   justify-content: center;
-  width: 98%;
-  height: 1.8rem;
+  width: 96%;
+  height: 1.6rem;
   font-size: 0.8rem;
   padding: 0.3em;
   background-color: var(--main-color-darker);
-  border-radius: 0.35em;
+  border-radius: 0.32em;
   color: var(--light-gray);
-  margin: 0 auto;
+  margin: 0.5em auto;
 }
 
 .search-for-chat-container input{
