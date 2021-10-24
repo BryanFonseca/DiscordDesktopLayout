@@ -3,7 +3,6 @@ const makeChatHtml = (chats) => {
   for(const chat of chats){
     let messages = '';
     for(const message of chat.content){
-      console.log(message);
       const messageStructure = `
     <div class="message">
       <div class="icon-circle">
