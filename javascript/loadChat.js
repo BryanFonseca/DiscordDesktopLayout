@@ -6,7 +6,7 @@ const makeChatHtml = (chats) => {
       const messageStructure = `
     <div class="message">
       <div class="icon-circle">
-	<img class="friend-img" src="avatars/${message.sender === 'Bryan' ? 'Me' : message.sender}.jpg" alt="friend picture">
+	<img class="friend-img" src="avatars/${message.sender === 'Bryan' ? 'me' : message.sender}.jpg" alt="friend picture">
       </div>
       <div class="message-data">
 	<div class="message-inner-data">
