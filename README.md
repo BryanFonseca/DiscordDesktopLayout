@@ -3,4 +3,5 @@ CSS layouts practice
 
 Reinforcing some of the things I've been learning lately😀
 
-![screenshot](https://github.com/BryanFonseca/DiscordDesktopLayout/screenshots/1.PNG)
+![screenshot 1](./screenshots/1.PNG)
+![screenshot 2](./screenshots/1.PNG)
