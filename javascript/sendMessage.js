@@ -36,7 +36,7 @@ const sendMessage = () => {
     `;
     chatContainer.insertAdjacentHTML('beforeend', message);
     messageInput.value = '';
-    scrollToBottom();
+    scrollToBottom('smooth');
   }
 };
 

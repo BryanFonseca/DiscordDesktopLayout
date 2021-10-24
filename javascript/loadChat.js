@@ -87,13 +87,13 @@ const allChats = [
 ];
 
 const allChatsHtml = makeChatHtml(allChats);
-console.log(allChatsHtml);
 
 const loadMessages = (name) => {
-// ir al final del chat
   chatContainer.innerHTML = allChatsHtml[name];
   scrollToBottom();
 };
+
+loadMessages('Richard');
 
 const friendsSpans = document.querySelectorAll('.friend.button span');
 friendsSpans.forEach((friendSpan) => {
