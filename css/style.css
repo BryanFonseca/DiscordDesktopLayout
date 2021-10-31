@@ -57,6 +57,10 @@ header > span{
   position: relative;
 }
 
+.icon-components a{
+  line-height: 0;
+}
+
 .icon-components::before{
   content: "";
   position: absolute;
