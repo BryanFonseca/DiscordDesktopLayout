@@ -15,7 +15,7 @@ header{
   line-height: 100%;
 }
 
-header > span{
+header .app-name{
   display: block;
   transform: scale(1, 0.95);
 }
@@ -40,16 +40,16 @@ header > span{
   transition: border-radius 0.2s;
 }
 
-.icon-container:hover .icon-components--small .icon-circle{
+.server-icon-container:hover .icon-components--small .icon-circle{
   border-radius: 30% !important;
   background-color: orangered;
 }
 
-.icon-container:nth-of-type(1) .icon-components--big .icon-circle{
+.server-icon-container:nth-of-type(1) .icon-components--big .icon-circle{
   background-color: grey;
 }
 
-.icon-container:hover .icon-components--small.icon-components::before{
+.server-icon-container:hover .icon-components--small.icon-components::before{
   padding-bottom: 40%;
 }
 
@@ -116,7 +116,7 @@ header > span{
 }
 
 
-.icon-container:first-child::after{
+.server-icon-container:first-child::after{
   content: "";
   display: block;
   width: 45%;
@@ -129,10 +129,10 @@ header > span{
   transition: all 0.2s;
 }
 
-.icon-container.icon--important:hover .icon-circle{
+.server-icon-container.icon--important:hover .icon-circle{
   background-color: var(--important-green);
 }
-.icon-container.icon--important:hover ion-icon{
+.server-icon-container.icon--important:hover ion-icon{
   color: #fff;
 }
 
@@ -216,6 +216,10 @@ header > span{
   color: var(--light-gray);
 }
 
+.links{
+  padding: 0 0.5em;
+}
+
 .links > *+*{
   margin-top: 0.2em;
 }
@@ -236,6 +240,10 @@ header > span{
 .link h2{
   font-size: 1rem;
   font-weight: 400;
+}
+
+.direct-messages{
+  padding: 0 0.5em;
 }
 
 .direct-messages > h2{
@@ -295,14 +303,12 @@ header > span{
   height: 3rem;
   width: 100%;
   background-color: var(--main-color-shade-1);
-  position: absolute;
-  bottom: 0;
-  left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.6em;
   overflow: hidden;
+  margin-top: auto;
 }
 
 .name{
@@ -437,7 +443,7 @@ header > span{
   flex-direction: column;
   gap: 1.2em;
   overflow-y: auto;
-  margin-bottom: 1em;
+  margin: 0.5em 0.25em 1em 0.25em;
   flex-basis: 0;
   flex-grow: 1;
 }
