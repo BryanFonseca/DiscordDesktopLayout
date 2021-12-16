@@ -307,7 +307,7 @@ header .app-name{
   align-items: center;
   justify-content: space-between;
   gap: 0.6em;
-  overflow: hidden;
+  overflow: show;
   margin-top: auto;
 }
 
@@ -568,4 +568,87 @@ header .app-name{
 
 .modal-close:hover{
   color: #bbb;
+}
+
+.button{
+  position: relative;
+}
+
+/* El tamaño de aquí no será controlado por JS porque como máximo tendrá
+ * el tamaño de su contenedor, que es más que suficiente para contener
+ * una palabra.
+ * */
+.hover-label{
+  font-size: 0.85rem;
+  position: absolute;
+  border-radius: 0.3em;
+  background-color: var(--main-color-shade-3);
+  padding: 0.5em 0.8em;
+  opacity: 0;
+
+  transition: transform 0.1s ease-out, opacity 0.02s ease-out;
+}
+
+.hover-label--bottom{
+  top: -140%;
+  left: 50%;
+  transform: translateX(-50%) scale(90%);
+}
+
+.button:hover .hover-label{
+  transform: translateX(-50%) scale(100%);
+  opacity: 100%;
+}
+
+/* triángulo para hacer la cola del label  */
+.hover-label::after{
+  content: '';
+  border: 0.3em solid;
+  position: absolute;
+}
+.hover-label--bottom::after{
+  border-color: var(--main-color-shade-3) transparent transparent;
+  left: 50%;
+  bottom: 0%;
+  transform: translateX(-50%) translateY(100%);
+}
+
+.server-icon-container{
+  position: relative;
+}
+
+.server-icon-container:hover .hover-label{
+  transform: translateX(-50%) scale(100%);
+  opacity: 100%;
+}
+
+.server-icon-container:hover .hover-label--left{
+  z-index: 10;
+  transform: translateY(-50%);
+  left: 120%;
+  top: 50%;
+}
+
+.hover-label--left::after{
+  border-color: transparent var(--main-color-shade-3) transparent transparent;
+  top: 50%;
+  left: 0%;
+  transform: translateX(-100%) translateY(-50%);
+}
+
+.hover-label--left{
+  /*   max-width: 200px; */
+  /* comportamiento por defecto, si el width es menor que cierto valor
+   * (15 em) un valor considerable para caber en una línea
+   * Si es mayor, entonces se fija el width y white-space se asigna
+   * a su valor por defecto para que escale verticalmente lo necesario
+   * */
+  white-space: nowrap;
+  /*   width: 15em; */
+  text-overflow: ellipsis;
+  display: inline-block;
+  left: 100%;
+  top: 50%;
+  transform: translateX(-10%) translateY(-50%);
+  padding: 0.6em 0.8em;
 }
