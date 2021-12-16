@@ -590,7 +590,7 @@ header .app-name{
 }
 
 .hover-label--bottom{
-  top: -140%;
+  top: -145%;
   left: 50%;
   transform: translateX(-50%) scale(90%);
 }

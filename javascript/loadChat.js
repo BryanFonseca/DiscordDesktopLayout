@@ -80,7 +80,7 @@ const allChats = [
       {sender: 'Tanisha', text: 'Hello'},
       {sender: 'Bryan', text: 'HI'},
       {sender: 'Tanisha', text: 'ur pretty handsome'},
-      {sender: 'Bryan', text: '🥵'},
+      {sender: 'Bryan', text: 'ikr🥵'},
     ]
   }
 ];
