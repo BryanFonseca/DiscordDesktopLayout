@@ -86,9 +86,12 @@ const allChats = [
 ];
 
 const allChatsHtml = makeChatHtml(allChats);
-
+const chattingWith = document.querySelector('.chatting-with');
+const inputChat = document.querySelector('.input-message > input[type=text]');
 const loadMessages = (name) => {
   chatContainer.innerHTML = allChatsHtml[name];
+  chattingWith.textContent = name;
+  inputChat.attributes.placeholder.value = 'Send message to ' + name;
   scrollToBottom();
 };
 

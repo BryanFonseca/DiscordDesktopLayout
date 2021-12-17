@@ -10,6 +10,7 @@ closeButtonsParent.addEventListener('click', function(e){
   if(friend.classList.contains('active')) {
     document.querySelector('.chat').innerHTML = '';
     friendsArr.forEach((friend) => friend.classList.remove('active'));
+    chattingWith.textContent = '';
   }
 
   if(friendsArr.every((friend) => friend.classList.contains('hide'))){
